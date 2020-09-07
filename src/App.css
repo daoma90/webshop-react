@@ -399,5 +399,14 @@
 
 .ReactModal__Content {
   width: 40%;
+  height: 600px;
   margin: auto;
+}
+
+.ReactModal__Overlay {
+  background-color: black;
+}
+
+.ReactModal__Overlay--after-open {
+  background-color: black;
 }

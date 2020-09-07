@@ -9,13 +9,23 @@ export default function Cart() {
   const [cartItems, setCartItems] = useContext(CartContext);
   const [modalIsOpen, setModalIsOpen] = useState(false);
 
+  Modal.setAppElement("#root");
+
   return (
     <div className="navbar__cart-modal">
       <div
         className="navbar__cart-btn"
         onClick={() => setModalIsOpen(true)}
       ></div>
-      <Modal isOpen={modalIsOpen} onRequestClose={() => setModalIsOpen(false)}>
+      <Modal
+        isOpen={modalIsOpen}
+        onRequestClose={() => setModalIsOpen(false)}
+        style={{
+          overlay: {
+            backgroundColor: "#3a393991",
+          },
+        }}
+      >
         <div className="cart">
           <h2 className="cart__header">Shopping cart</h2>
           <div className="cart__wrapper">
